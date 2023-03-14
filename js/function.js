@@ -11,6 +11,16 @@ $(function () {
       $('html,body').animate({ scrollTop: 0 }); //최초 로딩시 맨위로 이동
    });
 });
+//마우스 포인터 
+var pointSize = $(".pointer").width()/2;
+$("#wrap").mousemove(function(e){    
+    $('.pointer').css("top", e.pageY-pointSize);
+    $('.pointer').css("left", e.pageX-pointSize);
+    $('.pointer').fadeIn();
+});
+$("#wrap").on("mouseleave", function(){
+  $('.pointer').fadeOut();
+});
 
 $(function () {
    const $h1 = $('h1');
@@ -325,6 +335,100 @@ $(function () {
    //모달(라이트박스)
    const $btnProc = $('#portfolio > article.slides a.proc');
    const $shadow = $('#portfolio > article.slides .shadow');
+   const $lightbox = $shadow.children('.lightbox');
+   const $btnClse = $shadow.children('.clse');
+
+   //작업과정 버튼 클릭시
+   $btnProc.on('click', function (evt) {
+      evt.preventDefault();
+      $shadow.eq(nowIdx).show();
+   });
+
+   //닫기버튼
+   $btnClse.on('click', function () {
+      $shadow.hide();
+   });
+
+   //그림자영역 클릭시 닫힘
+   $shadow.on('click', function () {
+      $(this).hide();
+   });
+
+   //이벤트전파 설정
+   $lightbox.on('click', function (evt) {
+      evt.stopPropagation();
+   });
+
+   //ESC키를 이용한 닫기
+   $(document).on('keyup', function (evt) {
+      if (evt.which === 27) {
+         $shadow.hide();
+      }
+   });
+});
+//ETC 영역
+$(function () {
+   //1. 페이드슬라이드
+   const $slides = $('#etc > article.etc-slides > .etc-slides-container > figure ');
+   const $indicator = $('#etc > article.etc-slides > .etc-slides-pagination > li > a');
+   const $btnPrev = $('#etc .slides-prev');
+   const $btnNext = $('#etc .slides-next');
+
+   let nowIdx = 0;
+   let oldIdx = nowIdx;
+
+   function fadeFn() {
+      //활성화표시
+      $indicator.eq(nowIdx).parent().addClass('on').siblings().removeClass('on');
+
+      //슬라이드처리
+      $slides.eq(oldIdx).stop().fadeOut(200); //이전 슬라이드 사라짐
+      $slides.eq(nowIdx).stop().fadeIn(200).css({ display: 'flex' }); //이번 슬라이드
+   }
+
+   //인디케이터
+   $indicator.on('click', function (evt) {
+      evt.preventDefault();
+
+      oldIdx = nowIdx;
+      nowIdx = $indicator.index(this);
+
+      fadeFn();
+   });
+
+   //다음버튼
+   $btnNext.on('click', function (evt) {
+      evt.preventDefault();
+
+      oldIdx = nowIdx;
+
+      if (nowIdx < 2) {
+         nowIdx++;
+      } else {
+         nowIdx = 0;
+      }
+
+      fadeFn();
+   });
+
+   //이전버튼
+   $btnPrev.on('click', function (evt) {
+      evt.preventDefault();
+
+      oldIdx = nowIdx;
+
+      if (nowIdx > 0) {
+         nowIdx--;
+      } else {
+         nowIdx = 2;
+      }
+
+      fadeFn();
+   });
+
+   //모달(라이트박스)
+   const $btnProc = $('#etc > article.etc-slides a.proc');
+   const $shadow = $('#etc > article.etc-slides .shadow');
    const $lightbox = $shadow.children('.lightbox');
    const $btnClse = $shadow.children('.clse');
 

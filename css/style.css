@@ -3,6 +3,15 @@
   position: relative;
   min-width: 1200px;
 }
+#wrap > .pointer {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-image: url(./../images/mouse-logo.png);
+  background-size: cover;
+  cursor: url(./../images/free-icon-precision-6791325\ \(1\).png), auto;
+  transition: all 0.5s ease-out;
+}
 @media screen and (max-width:600px) {
   #wrap {
     min-width: 100%;
@@ -49,9 +58,9 @@
 }
 @media screen and (max-width:600px) {
   #home {
-    background-image: url(./../images/visual.png);
+    background-image: url(./../images/aboutme/jihye-room.png);
     background-position: center center;
-    background-size: cover;
+    background-size: auto;
     background-repeat: no-repeat;
   }
 }
@@ -65,7 +74,7 @@
 }
 @media screen and (max-width:600px) {
   #home > .intro {
-    top: 25%;
+    top: 30%;
     padding-bottom: 30px;
   }
 }
@@ -97,6 +106,7 @@
 }
 @media screen and (max-width:600px) {
   #home > .intro > p > span {
+    color: #ffc90e;
     display: block;
   }
 }
@@ -373,7 +383,8 @@ header ~ section > h2:after {
 }
 @media screen and (max-width:600px) {
   #aboutme > .container > .profile {
-    width: 100%;
+    width: 70%;
+    margin: 0 auto;
   }
 }
 #aboutme > .container > .profile > div {
@@ -1722,7 +1733,11 @@ header ~ section > h2:after {
 }
 @media screen and (max-width:600px) {
   #portfolio > article.slides > .slides-container > figure > .frame > img {
-    width: 100%;
+    width: 292px;
+    height: 160px;
+    position: absolute;
+    left: 10%;
+    top: 10px;
   }
 }
 #portfolio > article.slides > .slides-navigation {
@@ -1916,6 +1931,434 @@ header ~ section > h2:after {
 }
 @media screen and (max-width:600px) {
   #portfolio > article.intro > .container > .coding > div > p > span {
+    margin-bottom: 20px;
+  }
+}
+
+#etc > .etc-slides {
+  width: 1200px;
+  margin: 0 auto;
+}
+@media screen and (max-width:600px) {
+  #etc > .etc-slides {
+    width: 100%;
+    margin: 0;
+  }
+}
+#etc > .etc-slides.etc-slides {
+  position: relative;
+}
+@media screen and (max-width:600px) {
+  #etc > .etc-slides.etc-slides {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+#etc > .etc-slides.etc-slides > .etc-slides-pagination {
+  display: flex;
+  justify-content: space-around;
+  width: 840px;
+  margin: 0 auto 96px;
+}
+@media screen and (max-width:600px) {
+  #etc > .etc-slides.etc-slides > .etc-slides-pagination {
+    position: absolute;
+    left: 50%;
+    bottom: 6px;
+    z-index: 100;
+    width: 180px;
+    margin: 0;
+    margin-left: -90px;
+    background-color: #eeeeee;
+    border-radius: 50px;
+  }
+}
+#etc > .etc-slides.etc-slides > .etc-slides-pagination > li {
+  overflow: hidden;
+  width: 120px;
+  border: 1px solid #eeeeee;
+  border-radius: 20px;
+}
+@media screen and (max-width:600px) {
+  #etc > .etc-slides.etc-slides > .etc-slides-pagination > li {
+    width: 60px;
+  }
+}
+#etc > .etc-slides.etc-slides > .etc-slides-pagination > li.on > a, #etc > .etc-slides.etc-slides > .etc-slides-pagination > li:hover > a {
+  color: #ffffff;
+  background-color: #097988;
+}
+#etc > .etc-slides.etc-slides > .etc-slides-pagination > li > a {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+@media screen and (max-width:600px) {
+  #etc > .etc-slides.etc-slides > .etc-slides-pagination > li > a {
+    height: 10px;
+    text-indent: -9999px;
+    transition: all 0.3s;
+  }
+}
+#etc > .etc-slides.etc-slides > .etc-slides-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 380px;
+}
+@media screen and (max-width:600px) {
+  #etc > .etc-slides.etc-slides > .etc-slides-container {
+    height: 600px;
+  }
+}
+#etc > .etc-slides.etc-slides > .etc-slides-container > figure {
+  display: none;
+  justify-content: space-between;
+  position: absolute;
+  left: 20%;
+  top: 10%;
+}
+@media screen and (max-width:600px) {
+  #etc > .etc-slides.etc-slides > .etc-slides-container > figure {
+    flex-direction: column-reverse;
+  }
+}
+#etc > .etc-slides.etc-slides > .etc-slides-container > figure:nth-child(1) {
+  display: flex;
+}
+#etc > .etc-slides.etc-slides > .etc-slides-container > figure > figcaption {
+  width: 500px;
+  padding-top: 35px;
+}
+@media screen and (max-width:600px) {
+  #etc > .etc-slides.etc-slides > .etc-slides-container > figure > figcaption {
+    width: 80%;
+    margin: 50px auto;
+    padding-bottom: 50px;
+  }
+}
+#etc > .etc-slides.etc-slides > .etc-slides-container > figure > figcaption > h3 {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 24px;
+}
+#etc > .etc-slides.etc-slides > .etc-slides-container > figure > figcaption > .tip {
+  margin-top: 10px;
+  color: #6f6f6f;
+}
+@media screen and (max-width:600px) {
+  #etc > .etc-slides.etc-slides > .etc-slides-container > figure > figcaption > .tip {
+    margin-left: 20px;
+  }
+}
+#etc > .etc-slides.etc-slides > .etc-slides-container > figure > figcaption > .desc,
+#etc > .etc-slides.etc-slides > .etc-slides-container > figure > figcaption > .tools,
+#etc > .etc-slides.etc-slides > .etc-slides-container > figure > figcaption > .etc {
+  margin-top: 20px;
+  color: #3c3c3c;
+  line-height: 24px;
+}
+#etc > .etc-slides.etc-slides > .etc-slides-container > figure > figcaption > .desc > span,
+#etc > .etc-slides.etc-slides > .etc-slides-container > figure > figcaption > .tools > span,
+#etc > .etc-slides.etc-slides > .etc-slides-container > figure > figcaption > .etc > span {
+  font-weight: 600;
+}
+@media screen and (max-width:600px) {
+  #etc > .etc-slides.etc-slides > .etc-slides-container > figure > figcaption > .desc br,
+  #etc > .etc-slides.etc-slides > .etc-slides-container > figure > figcaption > .tools br,
+  #etc > .etc-slides.etc-slides > .etc-slides-container > figure > figcaption > .etc br {
+    display: none;
+  }
+}
+#etc > .etc-slides.etc-slides > .etc-slides-container > figure > figcaption > .etc {
+  margin: 0 0 30px 0;
+}
+#etc > .etc-slides.etc-slides > .etc-slides-container > figure > figcaption > .btn {
+  display: flex;
+  margin-right: -50px;
+}
+#etc > .etc-slides.etc-slides > .etc-slides-container > figure > figcaption > .btn > a {
+  display: block;
+  width: 132px;
+  height: 40px;
+  font-size: 15px;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-align: center;
+  background-color: #eeeeee;
+  border-radius: 50px;
+  transition: all 0.2s ease-out;
+}
+#etc > .etc-slides.etc-slides > .etc-slides-container > figure > figcaption > .btn > a.proc {
+  margin-right: 10px;
+}
+@media screen and (max-width:600px) {
+  #etc > .etc-slides.etc-slides > .etc-slides-container > figure > figcaption > .btn > a.proc {
+    display: none;
+  }
+}
+#etc > .etc-slides.etc-slides > .etc-slides-container > figure > figcaption > .btn > a:hover {
+  color: #ffffff;
+  background-color: #68c3a3;
+}
+#etc > .etc-slides.etc-slides > .etc-slides-container > figure > figcaption > .shadow {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#etc > .etc-slides.etc-slides > .etc-slides-container > figure > figcaption > .shadow > .lightbox {
+  display: block;
+  overflow-y: scroll;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 960px;
+  height: 800px;
+  margin: -400px 0 0 -480px;
+}
+#etc > .etc-slides.etc-slides > .etc-slides-container > figure > figcaption > .shadow > .lightbox > img {
+  display: block;
+  width: 100%;
+}
+#etc > .etc-slides.etc-slides > .etc-slides-container > figure > figcaption > .shadow > .clse {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: 370px 0 0 410px;
+}
+#etc > .etc-slides.etc-slides > .etc-slides-container > figure > .frame {
+  position: relative;
+  width: 400px;
+  height: 600px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width:600px) {
+  #etc > .etc-slides.etc-slides > .etc-slides-container > figure > .frame {
+    width: 360px;
+    height: 198px;
+    margin: 20px auto;
+  }
+}
+#etc > .etc-slides.etc-slides > .etc-slides-container > figure > .frame > img {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -40px;
+  width: 400px;
+  height: 400px;
+  padding: 5px;
+  border: 1px solid #f2f2f2;
+  box-sizing: border-box;
+  margin-left: -150px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width:600px) {
+  #etc > .etc-slides.etc-slides > .etc-slides-container > figure > .frame > img {
+    width: 300px;
+    height: 260px;
+    position: absolute;
+    left: 30%;
+    top: 10px;
+    border: 2px solid #000;
+  }
+}
+#etc > .etc-slides.etc-slides > .slides-navigation {
+  display: none;
+}
+@media screen and (max-width:600px) {
+  #etc > .etc-slides.etc-slides > .slides-navigation {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 50px;
+    height: 25px;
+    text-indent: -9999px;
+  }
+  #etc > .etc-slides.etc-slides > .slides-navigation.slides-prev {
+    left: 7%;
+    background-image: url(./../images/portfolio/btn_prev.png);
+  }
+  #etc > .etc-slides.etc-slides > .slides-navigation.slides-next {
+    right: 7%;
+    background-image: url(./../images/portfolio/btn_next.png);
+  }
+}
+#etc > .etc-slides.intro {
+  width: 100%;
+  background-image: url(./../images/portfolio/bg_pofol.png);
+  background-size: cover;
+}
+#etc > .etc-slides.intro > .container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 80px 0;
+}
+@media screen and (max-width:600px) {
+  #etc > .etc-slides.intro > .container {
+    width: 100%;
+  }
+}
+#etc > .etc-slides.intro > .container > h3 {
+  position: relative;
+  margin-bottom: 56px;
+  font-weight: 500;
+  font-size: 32px;
+  text-align: center;
+}
+#etc > .etc-slides.intro > .container > h3:before {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 48px;
+  height: 86px;
+  background-image: url(./../images/deocBlockTransparent.png);
+  content: "";
+}
+#etc > .etc-slides.intro > .container > h3:after {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 180px;
+  width: 58px;
+  height: 156px;
+  background-image: url(./../images/decoBlockBlue.png);
+  content: "";
+}
+@media screen and (max-width:600px) {
+  #etc > .etc-slides.intro > .container > h3 > span {
+    display: block;
+    margin-top: 22px;
+  }
+  #etc > .etc-slides.intro > .container > h3:after, #etc > .etc-slides.intro > .container > h3:before {
+    display: none;
+  }
+}
+#etc > .etc-slides.intro > .container > p {
+  width: 664px;
+  margin: 0 auto 80px;
+  line-height: 30px;
+}
+@media screen and (max-width:600px) {
+  #etc > .etc-slides.intro > .container > p {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}
+#etc > .etc-slides.intro > .container > p > span {
+  display: block;
+  margin-bottom: 30px;
+}
+@media screen and (max-width:600px) {
+  #etc > .etc-slides.intro > .container > p > span br {
+    display: none;
+  }
+}
+#etc > .etc-slides.intro > .container > p > strong {
+  font-weight: 400;
+}
+#etc > .etc-slides.intro > .container > .coding {
+  margin-top: 100px;
+}
+@media screen and (max-width:600px) {
+  #etc > .etc-slides.intro > .container > .coding {
+    margin-top: 0;
+  }
+}
+#etc > .etc-slides.intro > .container > .coding > h4 {
+  position: relative;
+  height: 300px;
+  margin-bottom: 104px;
+  font-weight: 400;
+}
+@media screen and (max-width:600px) {
+  #etc > .etc-slides.intro > .container > .coding > h4 {
+    width: 90%;
+    margin: 0 auto 50px;
+    text-align: center;
+  }
+}
+#etc > .etc-slides.intro > .container > .coding > h4 > span {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  margin-left: -140px;
+}
+@media screen and (max-width:600px) {
+  #etc > .etc-slides.intro > .container > .coding > h4 > span {
+    left: 0;
+    bottom: -20px;
+    width: 100%;
+    margin: 0;
+  }
+}
+#etc > .etc-slides.intro > .container > .coding > h4:after {
+  display: block;
+  position: absolute;
+  right: 35px;
+  bottom: 0;
+  z-index: -1;
+  width: 470px;
+  height: 300px;
+  background-image: url(./../images/portfolio/code01.png);
+  content: "";
+}
+@media screen and (max-width:600px) {
+  #etc > .etc-slides.intro > .container > .coding > h4:after {
+    width: 100%;
+    right: 50%;
+    margin-right: -50%;
+  }
+}
+#etc > .etc-slides.intro > .container > .coding > div {
+  height: 436px;
+  padding-left: 550px;
+  background-image: url(./../images/portfolio/code02.png);
+  background-position: 50px 0;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width:600px) {
+  #etc > .etc-slides.intro > .container > .coding > div {
+    width: 90%;
+    margin: 0 auto;
+    padding-left: 0;
+    padding-bottom: 320px;
+    background-position: 0 bottom;
+  }
+}
+#etc > .etc-slides.intro > .container > .coding > div > h4 {
+  padding: 30px 0;
+  font-size: 32px;
+}
+@media screen and (max-width:600px) {
+  #etc > .etc-slides.intro > .container > .coding > div > h4 {
+    font-weight: 500;
+    font-size: 18px;
+  }
+}
+#etc > .etc-slides.intro > .container > .coding > div > p {
+  line-height: 30px;
+}
+@media screen and (max-width:600px) {
+  #etc > .etc-slides.intro > .container > .coding > div > p {
+    line-height: 1.6;
+  }
+  #etc > .etc-slides.intro > .container > .coding > div > p br {
+    display: none;
+  }
+}
+#etc > .etc-slides.intro > .container > .coding > div > p > span {
+  display: block;
+  margin-bottom: 30px;
+}
+@media screen and (max-width:600px) {
+  #etc > .etc-slides.intro > .container > .coding > div > p > span {
     margin-bottom: 20px;
   }
 }
